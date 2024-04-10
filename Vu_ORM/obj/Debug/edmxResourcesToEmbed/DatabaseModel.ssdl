@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vu_ORMModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="tbFaculty">
+    <Key>
+      <PropertyRef Name="facultyID" />
+    </Key>
+    <Property Name="facultyID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="facultyName" Type="nvarchar" MaxLength="250" />
+  </EntityType>
+  <EntityType Name="tbStudent">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="studentName" Type="nvarchar" MaxLength="250" />
+    <Property Name="studentGender" Type="nvarchar" MaxLength="6" />
+    <Property Name="studentAge" Type="int" />
+    <Property Name="address" Type="nvarchar(max)" />
+    <Property Name="facultyID" Type="int" />
+  </EntityType>
+  <Association Name="FK__tbStudent__facul__398D8EEE">
+    <End Role="tbFaculty" Type="Self.tbFaculty" Multiplicity="0..1" />
+    <End Role="tbStudent" Type="Self.tbStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbFaculty">
+        <PropertyRef Name="facultyID" />
+      </Principal>
+      <Dependent Role="tbStudent">
+        <PropertyRef Name="facultyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Vu_ORMModelStoreContainer">
+    <EntitySet Name="tbFaculty" EntityType="Self.tbFaculty" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="tbStudent" EntityType="Self.tbStudent" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__tbStudent__facul__398D8EEE" Association="Self.FK__tbStudent__facul__398D8EEE">
+      <End Role="tbFaculty" EntitySet="tbFaculty" />
+      <End Role="tbStudent" EntitySet="tbStudent" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

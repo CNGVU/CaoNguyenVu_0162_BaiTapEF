@@ -1,0 +1,25 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="Vu_ORMModelStoreContainer" CdmEntityContainer="Vu_ORMEntities">
+    <EntitySetMapping Name="tbFaculties">
+      <EntityTypeMapping TypeName="Vu_ORMModel.tbFaculty">
+        <MappingFragment StoreEntitySet="tbFaculty">
+          <ScalarProperty Name="facultyID" ColumnName="facultyID" />
+          <ScalarProperty Name="facultyName" ColumnName="facultyName" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="tbStudents">
+      <EntityTypeMapping TypeName="Vu_ORMModel.tbStudent">
+        <MappingFragment StoreEntitySet="tbStudent">
+          <ScalarProperty Name="studentID" ColumnName="studentID" />
+          <ScalarProperty Name="studentName" ColumnName="studentName" />
+          <ScalarProperty Name="studentGender" ColumnName="studentGender" />
+          <ScalarProperty Name="studentAge" ColumnName="studentAge" />
+          <ScalarProperty Name="address" ColumnName="address" />
+          <ScalarProperty Name="facultyID" ColumnName="facultyID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

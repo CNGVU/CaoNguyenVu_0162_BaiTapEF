@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="Vu_ORMModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="tbFaculty">
+    <Key>
+      <PropertyRef Name="facultyID" />
+    </Key>
+    <Property Name="facultyID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="facultyName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="tbStudents" Relationship="Self.FK__tbStudent__facul__398D8EEE" FromRole="tbFaculty" ToRole="tbStudent" />
+  </EntityType>
+  <EntityType Name="tbStudent">
+    <Key>
+      <PropertyRef Name="studentID" />
+    </Key>
+    <Property Name="studentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="studentName" Type="String" MaxLength="250" FixedLength="false" Unicode="true" />
+    <Property Name="studentGender" Type="String" MaxLength="6" FixedLength="false" Unicode="true" />
+    <Property Name="studentAge" Type="Int32" />
+    <Property Name="address" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="facultyID" Type="Int32" />
+    <NavigationProperty Name="tbFaculty" Relationship="Self.FK__tbStudent__facul__398D8EEE" FromRole="tbStudent" ToRole="tbFaculty" />
+  </EntityType>
+  <Association Name="FK__tbStudent__facul__398D8EEE">
+    <End Role="tbFaculty" Type="Self.tbFaculty" Multiplicity="0..1" />
+    <End Role="tbStudent" Type="Self.tbStudent" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="tbFaculty">
+        <PropertyRef Name="facultyID" />
+      </Principal>
+      <Dependent Role="tbStudent">
+        <PropertyRef Name="facultyID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="Vu_ORMEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="tbFaculties" EntityType="Self.tbFaculty" />
+    <EntitySet Name="tbStudents" EntityType="Self.tbStudent" />
+    <AssociationSet Name="FK__tbStudent__facul__398D8EEE" Association="Self.FK__tbStudent__facul__398D8EEE">
+      <End Role="tbFaculty" EntitySet="tbFaculties" />
+      <End Role="tbStudent" EntitySet="tbStudents" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

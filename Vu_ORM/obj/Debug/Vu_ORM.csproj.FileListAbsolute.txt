@@ -1,0 +1,12 @@
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\Vu_ORM.exe.config
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\Vu_ORM.exe
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\Vu_ORM.pdb
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\EntityFramework.dll
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\EntityFramework.SqlServer.dll
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\EntityFramework.xml
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\bin\Debug\EntityFramework.SqlServer.xml
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\obj\Debug\Vu_ORM.csproj.AssemblyReference.cache
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\obj\Debug\Vu_ORM.csproj.CoreCompileInputs.cache
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\obj\Debug\Vu_ORM.csproj.CopyComplete
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\obj\Debug\Vu_ORM.exe
+E:\Workspace\DH_SPKT\223\TH_CS\Vu_ORM\Vu_ORM\obj\Debug\Vu_ORM.pdb
